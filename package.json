@@ -1,0 +1,17 @@
+{
+  "name": "fem_22-expenses_chart",
+  "version": "1.0.0",
+  "description": "A frontend mentor practice in order to improve my skills on SASS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "keywords": [],
+  "author": "Cervantes Developer",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.6"
+  }
+}
