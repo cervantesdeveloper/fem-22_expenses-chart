@@ -1,0 +1,28 @@
+@use 'variables' as v;
+
+body{
+    font-family: v.$font;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
