@@ -1,6 +1,7 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
+
 .card-chart{
     width: clamp(21.4375rem, 100%, 33.75rem);
 }
@@ -206,4 +207,5 @@
 
     }
 }
+
 

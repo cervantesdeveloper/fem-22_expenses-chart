@@ -315,6 +315,9 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   background-color: rgb(248, 233, 221);
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
 }
 
 main {
@@ -347,6 +350,11 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
 }
 
 .card-chart {
