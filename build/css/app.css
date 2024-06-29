@@ -314,6 +314,15 @@ body {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: rgb(248, 233, 221);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 html {
@@ -325,6 +334,8 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -336,6 +347,205 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.card-chart {
+  width: clamp(21.4375rem, 100%, 33.75rem);
+}
+
+.card-chart__head {
+  background-color: rgb(236, 119, 95);
+  border-radius: 0.5rem;
+  min-height: 6rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .card-chart__head {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+  }
+}
+
+.card-chart__balance {
+  height: 100%;
+}
+.card-chart__balance h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  .card-chart__balance h2 {
+    margin-bottom: 1rem;
+  }
+}
+.card-chart__balance p {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75;
+}
+@media (min-width: 768px) {
+  .card-chart__balance p {
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
+
+.card-chart__logo {
+  width: 4rem;
+}
+@media (min-width: 768px) {
+  .card-chart__logo {
+    width: 4.5rem;
+  }
+}
+
+.card-chart__body {
+  background-color: rgb(255, 250, 245);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.card-chart__body h1 {
+  color: rgb(56, 35, 20);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .card-chart__body {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  .card-chart__body h1 {
+    font-size: 1.875rem;
+    line-height: 1.6;
+  }
+}
+
+.card-chart__chart {
+  width: 100%;
+  border-bottom: 2px solid rgb(248, 233, 221);
+  height: 15.625rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.3125rem;
+}
+@media (min-width: 768px) {
+  .card-chart__chart {
+    height: 17rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+.chart-bar {
+  min-width: 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+@media (min-width: 768px) {
+  .chart-bar {
+    width: 100%;
+  }
+}
+.chart-bar span {
+  display: block;
+  padding: 0.75rem 0;
+  border-radius: 0.25rem;
+  background-color: rgb(56, 35, 20);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.chart-bar:hover span {
+  opacity: 1;
+}
+.chart-bar div {
+  margin: 0 5px 0.75rem 5px;
+  background-color: rgb(236, 119, 95);
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+  border-radius: 0.25rem;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .chart-bar div {
+    margin: 0 8px 0.75rem 8px;
+  }
+}
+.chart-bar:hover div {
+  opacity: 0.6;
+}
+.chart-bar p {
+  color: rgb(147, 134, 123);
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.card-chart__text h3 {
+  font-size: 0.75rem;
+  color: rgb(147, 134, 123);
+  font-weight: 400;
+  line-height: 2;
+}
+@media (min-width: 768px) {
+  .card-chart__text h3 {
+    font-size: 1rem;
+  }
+}
+
+.card-chart__total {
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .card-chart__total {
+    height: 3.5rem;
+  }
+}
+.card-chart__total > p {
+  font-size: 1.3125rem;
+  color: rgb(56, 35, 20);
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+@media (min-width: 768px) {
+  .card-chart__total > p {
+    line-height: 3.5rem;
+    font-size: 2.375rem;
+  }
+}
+
+.card-chart__percent {
+  text-align: right;
+  font-size: 0.75rem;
+}
+.card-chart__percent p {
+  line-height: 1.3;
+}
+.card-chart__percent span {
+  display: inline-block;
+  color: rgb(147, 134, 123);
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .card-chart__percent p {
+    line-height: 2.3;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

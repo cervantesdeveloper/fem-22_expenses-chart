@@ -1,0 +1,209 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.card-chart{
+    width: clamp(21.4375rem, 100%, 33.75rem);
+}
+
+.card-chart__head{
+    background-color: v.$orange;
+    border-radius: .5rem;
+    min-height: 6rem;
+    color: v.$white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include m.tablet{
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+    }
+}
+
+.card-chart__balance{
+    height: 100%;
+    h2{
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+
+        @include m.tablet{
+            margin-bottom: 1rem;
+        }
+    }
+
+    p{
+        font-size: v.$font-size-body;
+        font-weight: 700;
+        line-height: 1.75;
+
+        @include m.tablet{
+            font-size: 2rem;
+            line-height: 1;
+        }
+    }
+
+   
+}
+
+.card-chart__logo{
+    width: 4rem;
+
+    @include m.tablet{
+        width: 4.5rem;
+    }
+}
+
+.card-chart__body{
+    background-color: v.$orange-light;
+    padding: 1.5rem;
+    border-radius: .5rem;
+
+    h1{
+        color: v.$brown-dark;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    @include m.tablet{
+        padding: 2rem;
+        border-radius: 1rem;
+
+        h1{
+            font-size: 1.875rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+.card-chart__chart{
+    width: 100%;
+    border-bottom: 2px solid v.$cream;
+    height: 15.625rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.3125rem;
+
+    @include m.tablet{
+        height: 17rem;
+        margin-bottom: 1.75rem;
+    }
+}
+
+.chart-bar{
+    min-width: 2.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    @include m.tablet{
+        width: 100%;
+    }
+
+    
+    
+    span{
+        display: block;
+        padding: .75rem 0;
+        border-radius: .25rem;
+        background-color: v.$brown-dark;
+        color: v.$white;
+        font-size: .75rem;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: .5rem;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+    }
+
+    &:hover span{
+        opacity: 1;
+    }
+
+    div{
+        margin: 0 5px .75rem 5px;
+        background-color: v.$orange;
+        cursor: pointer;
+        margin-bottom: .75rem;
+        border-radius: .25rem;
+        transition: opacity .3s ease-in-out;
+
+        @include m.tablet{
+            margin: 0 8px .75rem 8px;
+        }
+    }
+
+    &:hover div{
+        opacity: .6;
+    }
+
+    p{
+        color: v.$brown-medium;
+        font-size: .75rem;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 2rem;
+    }
+}
+
+.card-chart__text{
+    h3{
+        font-size: .75rem;
+        color: v.$brown-medium;
+        font-weight: 400;
+        line-height: 2;
+
+        @include m.tablet{
+            font-size: 1rem;
+        }
+    }
+}
+
+.card-chart__total{
+    display: flex;
+    justify-content: space-between;
+    height: 2.5rem;
+
+    @include m.tablet{
+        height: 3.5rem;
+    }
+
+    & > p{
+        font-size: 1.3125rem;
+        color: v.$brown-dark;
+        font-weight: 700;
+        line-height: 2.5rem;
+
+        @include m.tablet{
+            line-height: 3.5rem;
+            font-size: 2.375rem;
+        }
+    }
+}
+
+.card-chart__percent{
+    text-align: right;
+    font-size: .75rem;
+
+    p {
+        line-height: 1.3;
+    }
+
+    span{
+        display: inline-block;
+        color: v.$brown-medium;
+        line-height: 1.5;
+    }
+
+    @include m.tablet{
+        p{
+            line-height: 2.3;
+        }
+
+    }
+}
+
